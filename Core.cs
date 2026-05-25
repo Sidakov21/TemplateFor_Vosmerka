@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
 using System;
 
 namespace TemplateFor_Vosmerka
@@ -40,7 +41,12 @@ namespace TemplateFor_Vosmerka
                     string image = Image.Trim().ToLower();
                     if (image != "не указано" && image != "нет" && image != "отсутствует")
                     {
-                        return "/" + Image.TrimStart('\\', '/').Replace('\\', '/');
+                        string clean = Image.TrimStart('\\', '/');
+                        string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, clean);
+                        if (File.Exists(fullPath))
+                            return fullPath;
+
+                        return "/" + clean.Replace('\\', '/');
                     }
                 }
 
@@ -50,6 +56,12 @@ namespace TemplateFor_Vosmerka
 
         // Превышает ли минимальная стоимость 10000 руб.
         public bool IsExpensive => MinCost > 10000;
+    }
+
+    public partial class Material
+    {
+        // Нет материала на складе
+        public bool IsOutOfStock => !QuantityInHub.HasValue || QuantityInHub.Value == 0;
     }
 
 }

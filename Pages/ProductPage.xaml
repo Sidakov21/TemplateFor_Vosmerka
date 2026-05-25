@@ -10,6 +10,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Фильтры, Поиск, Сортировка -->
@@ -30,7 +31,8 @@
         </Grid>
 
         <!-- Список продукции -->
-        <ListView x:Name="ProductsListView" Grid.Row="1" Margin="10" HorizontalContentAlignment="Stretch">
+        <ListView x:Name="ProductsListView" Grid.Row="1" Margin="10" HorizontalContentAlignment="Stretch"
+                  MouseDoubleClick="ProductsListView_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Padding="10" BorderBrush="#D3D3D3" BorderThickness="1" Margin="2">
@@ -82,11 +84,15 @@
             </ListView.ItemContainerStyle>
         </ListView>
 
-        <!-- Нижняя панель действий -->
+        <!-- Нижняя панель действий (только админ) -->
         <StackPanel x:Name="AdminPanel" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <Button x:Name="BtnAdd" Content="Добавить продукцию" Margin="5" Width="180" Click="BtnAdd_Click"/>
             <Button x:Name="BtnEdit" Content="Изменить продукцию" Margin="5" Width="180" Click="BtnEdit_Click"/>
             <Button x:Name="BtnDelete" Content="Удалить продукцию" Margin="5" Width="180" Click="BtnDelete_Click"/>
         </StackPanel>
+
+        <!-- Навигация по разделам (админ + менеджер) -->
+        <Button x:Name="BtnMaterials" Grid.Row="3" Content="Перейти к материалам" Width="200"
+                HorizontalAlignment="Center" Margin="0,0,0,10" Click="BtnMaterials_Click"/>
     </Grid>
 </Page>

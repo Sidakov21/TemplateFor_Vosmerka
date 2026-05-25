@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace TemplateFor_Vosmerka.Pages
 {
@@ -11,6 +11,7 @@ namespace TemplateFor_Vosmerka.Pages
         public ProductPage()
         {
             InitializeComponent();
+            Loaded += (s, e) => { UpdateList(); CheckRole(); };
             LoadData();
         }
 
@@ -26,32 +27,29 @@ namespace TemplateFor_Vosmerka.Pages
             SearchTxtBx.TextChanged += FilterChanged;
             SortCmbBx.SelectionChanged += FilterChanged;
             FiltrCmbBx.SelectionChanged += FilterChanged;
-
-            UpdateList();
-            CheckRole();
         }
 
         private void CheckRole()
         {
-            // Проверка роли пользователя
             if (Core.LoggedUser == null)
             {
-                // Гость: скрываем панель администратора
                 AdminPanel.Visibility = Visibility.Collapsed;
+                BtnMaterials.Visibility = Visibility.Collapsed;
             }
-            else if (Core.LoggedUser.RoleId == 1) // Например, Администратор
+            else if (Core.LoggedUser.RoleId == 3) // Администратор
             {
                 AdminPanel.Visibility = Visibility.Visible;
+                BtnMaterials.Visibility = Visibility.Visible;
             }
-            else if (Core.LoggedUser.RoleId == 2) // Например, Менеджер
+            else if (Core.LoggedUser.RoleId == 2) // Менеджер
             {
-                AdminPanel.Visibility = Visibility.Visible;
-                BtnDelete.Visibility = Visibility.Collapsed; // Менеджер не может удалять
+                AdminPanel.Visibility = Visibility.Collapsed;
+                BtnMaterials.Visibility = Visibility.Visible;
             }
             else
             {
                 AdminPanel.Visibility = Visibility.Collapsed;
-
+                BtnMaterials.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -96,20 +94,32 @@ namespace TemplateFor_Vosmerka.Pages
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            // NavigationService.Navigate(new Uri("Pages/AddEditProductPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new AddEditProductPage());
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (ProductsListView.SelectedItem is Product selectedProduct)
             {
-                // Core.SelectedProduct = selectedProduct;
-                // NavigationService.Navigate(new Uri("Pages/AddEditProductPage.xaml", UriKind.Relative));
+                NavigationService.Navigate(new AddEditProductPage(selectedProduct));
             }
             else
             {
                 MessageHelper.ShowError("Выберите продукцию для редактирования!");
             }
+        }
+
+        private void ProductsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (ProductsListView.SelectedItem is Product selectedProduct)
+            {
+                NavigationService.Navigate(new AddEditProductPage(selectedProduct));
+            }
+        }
+
+        private void BtnMaterials_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MaterialPage());
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
