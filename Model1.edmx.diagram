@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba670d86391c427da247e00d9e3b770c" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_DemoExzModel.Make" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.Material" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.MaterialType" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.ProductPlace" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.ProductType" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.QuantityType" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.Role" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_DemoExzModel.User" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Make_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Make_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Material_MaterialType" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Material_QuantityType" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Product_ProductPlace" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_DemoExzModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
