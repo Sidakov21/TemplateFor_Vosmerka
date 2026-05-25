@@ -197,9 +197,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Documnets\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Восьмерка.png" />
+    <Resource Include="Images\picture.png" />
+    <Resource Include="Images\Восьмерка.ico" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

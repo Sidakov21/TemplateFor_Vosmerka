@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace TemplateFor_Vosmerka
+﻿namespace TemplateFor_Vosmerka
 {
     internal class Core
     {
