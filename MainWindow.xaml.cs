@@ -10,7 +10,16 @@ namespace TemplateFor_Vosmerka
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthPage());
+            MainFrame.Navigate(new Pages.AuthPage());
+            MainFrame.Navigated += MainFrame_Navigated;
+        }
+
+        private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            if (Core.LoggedUser != null)
+                TxtUserFio.Text = Core.LoggedUser.Name;
+            else
+                TxtUserFio.Text = "Гость";
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -20,9 +29,9 @@ namespace TemplateFor_Vosmerka
 
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
-            if (MainFrame.CanGoBack) 
+            if (MainFrame.CanGoBack)
                 BtnBack.Visibility = Visibility.Visible;
-            else 
+            else
                 BtnBack.Visibility = Visibility.Hidden;
         }
     }

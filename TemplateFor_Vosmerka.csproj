@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -202,6 +202,71 @@
     <Resource Include="Images\Восьмерка.png" />
     <Resource Include="Images\picture.png" />
     <Resource Include="Images\Восьмерка.ico" />
+    <Resource Include="products\tire_0.jpg" />
+    <Resource Include="products\tire_1.jpg" />
+    <Resource Include="products\tire_10.jpg" />
+    <Resource Include="products\tire_11.jpg" />
+    <Resource Include="products\tire_12.jpg" />
+    <Resource Include="products\tire_13.jpg" />
+    <Resource Include="products\tire_14.jpg" />
+    <Resource Include="products\tire_15.jpg" />
+    <Resource Include="products\tire_16.jpg" />
+    <Resource Include="products\tire_17.jpg" />
+    <Resource Include="products\tire_18.jpg" />
+    <Resource Include="products\tire_19.jpg" />
+    <Resource Include="products\tire_2.jpg" />
+    <Resource Include="products\tire_20.jpg" />
+    <Resource Include="products\tire_21.jpg" />
+    <Resource Include="products\tire_22.jpg" />
+    <Resource Include="products\tire_23.jpg" />
+    <Resource Include="products\tire_24.jpg" />
+    <Resource Include="products\tire_25.jpg" />
+    <Resource Include="products\tire_26.jpg" />
+    <Resource Include="products\tire_27.jpg" />
+    <Resource Include="products\tire_28.jpg" />
+    <Resource Include="products\tire_29.jpg" />
+    <Resource Include="products\tire_3.jpg" />
+    <Resource Include="products\tire_30.jpg" />
+    <Resource Include="products\tire_31.jpg" />
+    <Resource Include="products\tire_32.jpg" />
+    <Resource Include="products\tire_33.jpg" />
+    <Resource Include="products\tire_34.jpg" />
+    <Resource Include="products\tire_35.jpg" />
+    <Resource Include="products\tire_36.jpg" />
+    <Resource Include="products\tire_37.jpg" />
+    <Resource Include="products\tire_38.jpg" />
+    <Resource Include="products\tire_39.jpg" />
+    <Resource Include="products\tire_4.jpg" />
+    <Resource Include="products\tire_40.jpg" />
+    <Resource Include="products\tire_41.jpg" />
+    <Resource Include="products\tire_42.jpg" />
+    <Resource Include="products\tire_43.jpg" />
+    <Resource Include="products\tire_44.jpg" />
+    <Resource Include="products\tire_45.jpg" />
+    <Resource Include="products\tire_46.jpg" />
+    <Resource Include="products\tire_47.jpg" />
+    <Resource Include="products\tire_48.jpg" />
+    <Resource Include="products\tire_49.jpg" />
+    <Resource Include="products\tire_5.jpg" />
+    <Resource Include="products\tire_50.jpg" />
+    <Resource Include="products\tire_51.jpg" />
+    <Resource Include="products\tire_52.jpg" />
+    <Resource Include="products\tire_53.jpg" />
+    <Resource Include="products\tire_54.jpg" />
+    <Resource Include="products\tire_55.jpg" />
+    <Resource Include="products\tire_56.jpg" />
+    <Resource Include="products\tire_57.jpg" />
+    <Resource Include="products\tire_58.jpg" />
+    <Resource Include="products\tire_59.jpg" />
+    <Resource Include="products\tire_6.jpg" />
+    <Resource Include="products\tire_60.jpg" />
+    <Resource Include="products\tire_61.jpg" />
+    <Resource Include="products\tire_62.jpg" />
+    <Resource Include="products\tire_63.jpg" />
+    <Resource Include="products\tire_64.jpg" />
+    <Resource Include="products\tire_7.jpg" />
+    <Resource Include="products\tire_8.jpg" />
+    <Resource Include="products\tire_9.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

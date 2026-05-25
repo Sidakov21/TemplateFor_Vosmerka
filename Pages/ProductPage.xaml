@@ -26,7 +26,7 @@
                 <ComboBoxItem Content="По возрастанию цены"/>
                 <ComboBoxItem Content="По убыванию цены"/>
             </ComboBox>
-            <ComboBox x:Name="FiltrCmbBx" Grid.Column="2" Margin="5" SelectedIndex="0"/>
+            <ComboBox x:Name="FiltrCmbBx" Grid.Column="2" Margin="5" SelectedIndex="0" DisplayMemberPath="ProductTypeName"/>
         </Grid>
 
         <!-- Список продукции -->
@@ -49,13 +49,13 @@
                                 <TextBlock FontSize="16" FontWeight="Bold">
                                     <TextBlock.Text>
                                         <MultiBinding StringFormat="{}{0} | {1}">
-                                            <Binding Path="ProductType.Name"/>
-                                            <Binding Path="Name"/>
+                                            <Binding Path="ProductType.ProductTypeName"/>
+                                            <Binding Path="ProductName"/>
                                         </MultiBinding>
                                     </TextBlock.Text>
                                 </TextBlock>
                                 <TextBlock Text="{Binding Article, StringFormat={}Артикул: {0}}" Margin="0,3"/>
-                                <TextBlock Text="{Binding MaterialsList, StringFormat={}Материалы: {0}}" TextWrapping="Wrap" Foreground="Gray"/>
+                                <TextBlock Text="{Binding MaterialsList, StringFormat={}Материалы: {0}}" TextWrapping="Wrap" Foreground="Black"/>
                             </StackPanel>
 
                             <!-- Стоимость справа -->
